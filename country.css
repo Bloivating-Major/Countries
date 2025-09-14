@@ -1,0 +1,32 @@
+.back-button {
+  padding: 10px 20px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+main {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.country-details {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  margin-top: 60px;
+}
+
+.country-flag {
+  width: 500px;
+}
+
+.country-info {
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  flex-wrap: wrap;
+}
+
+.country-info p {
+  margin: 5px 0;
+}
