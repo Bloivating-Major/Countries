@@ -6,14 +6,16 @@ fetch(
   .then((response) => response.json())
   .then((data) => {
     data.forEach((country) => {
-      console.log(country);
       const countryCard = document.createElement("a");
       countryCard.classList.add("country-card");
+      countryCard.href = `/country.html?name=${country.name.common}`;
       countryCard.innerHTML = `
-            <img src=${country.flags.svg} alt="flag" />
+            <img src=${country.flags.svg} alt="${country.name.common} Flag" />
               <div class="country-card-info">
                 <h3 class="country-card-name">${country.name.common}</h3>
-                <p><b>Population : </b>${country.population}</p>
+                <p><b>Population : </b>${country.population.toLocaleString(
+                  "en-IN"
+                )}</p>
                 <p><b>Region : </b>${country.region}</p>
                 <p><b>Capital : </b>${country.capital}</p>
               </div>
