@@ -2,6 +2,7 @@
   padding: 10px 20px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  cursor: pointer;
 }
 
 main {
@@ -24,9 +25,25 @@ main {
   display: flex;
   flex-direction: column;
   height: 180px;
+  column-gap: 20px;
   flex-wrap: wrap;
 }
 
 .country-info p {
+  width: 48%;
   margin: 5px 0;
+}
+
+.border-countries {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.border-country {
+  padding: 5px 15px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
 }

@@ -15,8 +15,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="country.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="country.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="./country.js" defer></script>
   </head>
   <body>
@@ -27,37 +27,13 @@
       </div>
     </header>
 
-    <main >
+    <main>
       <div class="back-button-container">
-        <a href="#" class="back-button"><i class="fa-solid fa-arrow-left" ></i>&nbsp;&nbsp;Back</a>
+        <span class="back-button" onclick="history.back()"
+          ><i class="fa-solid fa-arrow-left"></i>&nbsp;&nbsp;Back</span
+        >
       </div>
-      <section class="country-details">
-        <div class="country-flag">
-          <img src="https://flagcdn.com/jm.svg" alt="Country Flag" class="country-flag" />
-        </div>
-        <div class="country-data">
-          <h1 class="country-name">India</h1>
-          <div class="country-info">
-            <p><b>Native Name :</b> Bharat </p>
-            <p><b>Population :</b> 1,417,173,173</p>
-            <p><b>Region :</b> Asia</p>
-            <p><b>Sub Region :</b> Southern Asia</p>
-            <p><b>Capital :</b> New Delhi</p>
-            <p><b>Top Level Domain :</b> .in</p>
-            <p><b>Currencies :</b> Indian Rupee</p>
-            <p><b>Languages :</b> Hindi, English</p>
-          </div>
-          <div class="border-countries">
-            <b>Border Countries:</b>
-            <span class="border-country">China</span>
-            <span class="border-country">Pakistan</span>
-            <span class="border-country">Nepal</span>
-            <span class="border-country">Bhutan</span>
-            <span class="border-country">Bangladesh</span>
-            <span class="border-country">Myanmar</span>
-          </div>
-        </div>
-      </section>
+      <section class="country-details"></section>
     </main>
   </body>
 </html>
