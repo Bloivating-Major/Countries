@@ -26,6 +26,8 @@ body {
 
 main {
   padding: 24px;
+  max-width: 1280px;
+  margin-inline: auto;
 }
 
 a {
@@ -34,8 +36,6 @@ a {
 }
 
 .countries-container {
-  max-width: 1280px;
-  margin-inline: auto;
   display: flex;
   gap: 64px;
   flex-wrap: wrap;
@@ -67,4 +67,41 @@ a {
   margin-block: 0px;
   font-weight: 800;
   font-size: 24px;
+}
+
+.searchfilter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.searchFeature{
+  padding-left: 6px;
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.searchFeature input{
+  padding: 10px 0px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 300px;
+  font-size: 16px;
+  font-family: Nunito, sans-serif;
+}
+
+.filterFeature {
+  padding: 10px 20px;
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.filterFeature select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: Nunito, sans-serif;
+  cursor: pointer;
 }
