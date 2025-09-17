@@ -18,7 +18,7 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}`)
      <div class="country-flag">
           <img src="${
             country.flags.svg
-          }" alt="Country Flag" class="country-flag" />
+          }" alt="Country Flag" class="country-flag-img" />
         </div>
         <div class="country-data">
           <h1 class="country-name">${country.name.common}</h1>
