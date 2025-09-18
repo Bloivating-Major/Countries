@@ -72,6 +72,7 @@ a {
 .searchfilter {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 40px;
 }
 
@@ -106,7 +107,6 @@ a {
   cursor: pointer;
 }
 
-
 @media (max-width: 768px) {
   .countries-container {
     width: 100%;
@@ -114,11 +114,10 @@ a {
     gap: 32px;
   }
 
-
-
   .searchfilter {
     width: 100%;
     flex-direction: column;
+    align-items: start;
     gap: 32px;
   }
 
@@ -138,7 +137,6 @@ a {
   .filterFeature {
     width: 100%;
     max-width: 200px;
-    text-align: center;
   }
 
   .filterFeature select{
