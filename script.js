@@ -1,6 +1,34 @@
 const countryCardContainer = document.querySelector(".countries-container");
 const selectRegion = document.querySelector('.selectRegion');
 const searchInput = document.querySelector('.searchFeature input');
+const darkModeToggle = document.querySelector('#darkModeToggle');
+const body = document.body;
+const icon = darkModeToggle.querySelector('i');
+const modeText = darkModeToggle.querySelector('span');
+
+if(localStorage.getItem('darkMode') === 'enabled'){
+  body.classList.add('dark-mode');
+  icon.classList.replace('fa-moon', 'fa-sun');
+  modeText.textContent = 'Light Mode';
+}else{
+  body.classList.remove('dark-mode');
+  icon.classList.replace('fa-sun', 'fa-moon');
+  modeText.textContent = 'Dark Mode';
+}
+
+darkModeToggle.addEventListener('click', ()=>{
+  body.classList.toggle('dark-mode');
+  const isDark = body.classList.contains('dark-mode');
+  if(isDark){
+    localStorage.setItem('darkMode', 'enabled');
+    icon.classList.replace('fa-moon', 'fa-sun');
+    modeText.textContent = 'Light Mode';
+  }else{
+    localStorage.setItem('darkMode', 'disabled');
+    icon.classList.replace('fa-sun', 'fa-moon');
+    modeText.textContent = 'Dark Mode';
+  }
+})
 
 let allCountriesData;
 
