@@ -1,13 +1,20 @@
 const countryCardContainer = document.querySelector(".countries-container");
-const selectRegion = document.querySelector(".selectRegion");
+const selectRegion = document.querySelector('.selectRegion');
+const searchInput = document.querySelector('.searchFeature input');
 
-selectRegion.addEventListener("change", (e) => {
-  fetch(`https://restcountries.com/v3.1/region/${e.target.value}`)
-    .then((res) => res.json())
-    .then((data) => {
-      countryCardContainer.innerHTML = "";
-      data.forEach(renderCountryCards);
-    });
+let allCountriesData;
+
+selectRegion.addEventListener("change", (e)=>{
+  fetch(`https://restcountries.com/v3.1/region/${e.target.value}`).then((res)=> res.json()).then((data)=>{
+    countryCardContainer.innerHTML=""
+    data.forEach(renderCountryCards);
+  })
+})
+
+searchInput.addEventListener("input", (e)=>{
+  countryCardContainer.innerHTML = ""; 
+  const filteredData = allCountriesData.filter((country)=> country.name.common.toLowerCase().trim().includes(e.target.value.toLowerCase().trim()));
+  filteredData.forEach(renderCountryCards);
 });
 
 fetch(
@@ -16,10 +23,10 @@ fetch(
   .then((response) => response.json())
   .then((data) => {
     data.forEach(renderCountryCards);
+    allCountriesData = data;
   });
 
 function renderCountryCards(country) {
-  console.log("hello");
   const countryCard = document.createElement("a");
   countryCard.classList.add("country-card");
   countryCard.href = `/country.html?name=${country.name.common}`;
