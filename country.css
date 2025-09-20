@@ -3,6 +3,8 @@
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   cursor: pointer;
+  background-color: var(--elements-color);
+  color: var(--text-color);
 }
 
 main {
@@ -46,6 +48,8 @@ main {
   border-radius: 5px;
   margin: 5px;
   cursor: pointer;
+  background-color: var(--elements-color);
+  color: var(--text-color);
 }
 
 @media (max-width: 768px) {
